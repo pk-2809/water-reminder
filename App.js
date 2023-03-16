@@ -1,19 +1,33 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import  Dashboard  from "./components/dashboard";
+import Start from './components/start';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={styles.coverSafeArea}>
+    <SafeAreaView style={styles.safeView}>
       <StatusBar style="auto" />
+    <View style={styles.container}>
+      {/* <Dashboard /> */}
+      <Start />
+    </View>
+    </SafeAreaView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  coverSafeArea:{
+    flex:1,
+    backgroundColor:'#fff'
+  },
+  safeView:{
+    flex:1
+  },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
