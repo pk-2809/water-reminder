@@ -1,9 +1,0 @@
-f1=open("source.txt","r")
-f2=open("target.txt","w")
-while True:
-    file=f1.readline()
-    if file[0]=="@":
-        continue
-    f2.write(file)
-f1.close()
-f2.close()
